@@ -4,7 +4,6 @@ project(dcl_fast_lio)
 SET(CMAKE_BUILD_TYPE "Release")
 
 ADD_COMPILE_OPTIONS(-std=c++14 )
-ADD_COMPILE_OPTIONS(-std=c++14 )
 set( CMAKE_CXX_FLAGS "-std=c++14 -O3" )
 
 add_definitions(-DROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/\")
@@ -34,6 +33,7 @@ if(CMAKE_SYSTEM_PROCESSOR MATCHES "(x86)|(X86)|(amd64)|(AMD64)" )
 else()
   add_definitions(-DMP_PROC_NUM=1)
 endif()
+
 
 find_package(libnabo)
 find_package(OpenMP QUIET)
